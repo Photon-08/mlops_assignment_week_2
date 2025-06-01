@@ -12,7 +12,7 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 
-data = pd.read_csv('/data/iris.csv')
+data = pd.read_csv('data/iris.csv')
 
 data.head()
 
@@ -21,7 +21,7 @@ y = data['species']
 
 model = DecisionTreeClassifier(random_state=42)
 
-model.train(X, y)
+model.fit(X, y)
 
 predictions = model.predict(X)
 
